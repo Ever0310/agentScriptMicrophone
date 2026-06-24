@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <capabilities>
+        <capability>lightning__ServiceCloudVoiceToolkitApi</capability>
+    </capabilities>
+    <targets>
+        <target>lightning__FlowScreen</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="script" type="String" label="Script" required="true"
+                description="Texte du script affiché par l'agent." />
+            <property name="color" type="String" label="Color"
+                description="Couleur de la bordure (ex: rgb(0, 112, 210))."
+                default="rgb(0, 112, 210)" />
+            <property name="size" type="String" label="Size"
+                datasource="small, medium, large"
+                default="medium"
+                description="Taille du texte du script." />
+            <property name="recordId" type="String" label="Record ID"
+                description="ID du Voice Call en cours." />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

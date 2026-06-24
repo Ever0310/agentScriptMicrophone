@@ -1,0 +1,32 @@
+<template>
+    <lightning-service-cloud-voice-toolkit-api></lightning-service-cloud-voice-toolkit-api>
+
+    <div class="agent-script-container" style={containerStyle}>
+        <div class="agent-script-body">
+            <span class="agent-script-avatar">
+                <img src={agentforceIconUrl} alt="Agentforce" class="avatar-img" />
+            </span>
+            <span class="agent-script-text">{script}</span>
+        </div>
+
+        <div class="agent-script-actions">
+            <lightning-button-icon
+                icon-name={microphoneIcon}
+                variant={microphoneVariant}
+                size="medium"
+                title={microphoneTitle}
+                alternative-text={microphoneTitle}
+                onclick={handleToggleMicrophone}>
+            </lightning-button-icon>
+
+            <lightning-button-icon
+                icon-name="utility:copy"
+                variant="border-filled"
+                size="medium"
+                title="Copier dans le presse-papiers"
+                alternative-text="Copier"
+                onclick={handleCopy}>
+            </lightning-button-icon>
+        </div>
+    </div>
+</template>
